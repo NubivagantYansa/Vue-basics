@@ -32,11 +32,12 @@
   </style>
 </head>
 <body>
-  <h1>Hello, Vue :)</h1>
+  <h1>Hello, Vue <span>🤓</span></h1>
 
   <div id="app">
     <div v-if="showBooks">
       <ul>
+        <!-- Dynamic classes ==> :class="{ key: value}" -->
         <li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book)">
           <img :src="book.img" :alt="book.title">
           <h3>{{ book.title }}</h3>
